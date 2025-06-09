@@ -1,6 +1,48 @@
-frontend/node_modules
+# Node modules only at root for Newman tests
+frontend/node_modules/
 infra/frontend/build
 .env
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+backend/.venv/
+backend/venv/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Database files
+db.sqlite3
+db.sqlite3-journal
+*.db
+
+# Logs and debug files
+*.log
+logs/
+django_logs.txt
+debug.log
+
+# Test coverage
+htmlcov/
+.coverage
+.coverage.*
+.pytest_cache/
+.tox/
+.nox/
+
+# Media and static files (generated)
+backend/media/
+backend/static/
+media/
+static/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -54,6 +96,11 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
+
+# Logs
+*.log
+logs/
+django_logs.txt
 
 # Translations
 *.mo
@@ -140,3 +187,15 @@ dmypy.json
 
 static/
 media/
+
+node_modules/
+# Next.js build output
+.next/
+# Nuxt.js build output
+.nuxt/
+# Gatsby files
+.cache/
+# Vue.js files
+dist/   
+
+typings/

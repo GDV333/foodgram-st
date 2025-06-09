@@ -1,0 +1,11 @@
+{
+  "id": "docker-environment",
+  "name": "Docker Environment",
+  "values": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost",
+      "enabled": true
+    }
+  ]
+}

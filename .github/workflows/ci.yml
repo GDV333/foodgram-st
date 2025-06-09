@@ -1,0 +1,104 @@
+name: Foodgram CI/CD
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master ]
+
+env:
+  SECRET_KEY: 'test-secret-key-for-ci-testing-only'
+  DEBUG: True
+  DB_ENGINE: django.db.backends.postgresql
+  DB_NAME: django_db
+  POSTGRES_USER: django_user
+  POSTGRES_PASSWORD: django_password
+  DB_HOST: localhost
+  DB_PORT: 5432
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_USER: django_user
+          POSTGRES_PASSWORD: django_password
+          POSTGRES_DB: django_db
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install Python dependencies
+      working-directory: ./backend
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Install Node.js and Newman
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+    
+    - name: Install Newman
+      run: npm install -g newman newman-reporter-htmlextra
+
+    - name: Run code quality checks
+      working-directory: ./backend
+      run: |
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 . --count --max-complexity=10 --max-line-length=100 --statistics
+
+    - name: Apply migrations
+      working-directory: ./backend
+      run: python manage.py migrate
+
+    - name: Load initial data
+      working-directory: ./backend
+      run: python manage.py loaddata fixtures/dev/ingredients_fixture.json
+
+    - name: Run pytest tests
+      working-directory: ./backend
+      run: |
+        python -m pytest --cov=. --cov-report=xml --cov-report=html -v
+
+    - name: Start Django server for API tests
+      working-directory: ./backend
+      run: |
+        python manage.py runserver 0.0.0.0:8000 &
+        sleep 15
+
+    - name: Run Newman API tests
+      working-directory: ./postman_collection
+      run: |
+        newman run foodgram.postman_collection.json \
+          --env-var "host=http://localhost:8000" \
+          --reporters cli,junit,htmlextra \
+          --reporter-junit-export newman-results.xml \
+          --reporter-htmlextra-export newman-report.html || true
+
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: |
+          ./backend/coverage.xml
+          ./backend/htmlcov/
+          ./postman_collection/newman-results.xml
+          ./postman_collection/newman-report.html

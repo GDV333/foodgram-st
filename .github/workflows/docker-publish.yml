@@ -1,0 +1,42 @@
+name: Docker Build Test
+
+on:
+  pull_request:
+    branches: [ main, master ]
+
+env:
+  REGISTRY: docker.io
+  BACKEND_IMAGE_NAME: foodgram-backend
+  FRONTEND_IMAGE_NAME: foodgram-frontend
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Test backend Docker build
+      uses: docker/build-push-action@v5
+      with:
+        context: ./backend
+        platforms: linux/amd64
+        push: false
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+    - name: Test frontend Docker build
+      uses: docker/build-push-action@v5
+      with:
+        context: ./frontend
+        platforms: linux/amd64
+        push: false
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+    - name: Build test success
+      run: echo "✅ Docker builds completed successfully!"

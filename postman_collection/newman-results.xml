@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="diploma" tests="139" time="6.185">
+  <testsuite name="register_and_get_tokens // No Auth / create_users / create_first_user" id="f35eb3e1-a85b-4f1c-b531-7f341cba0fa1" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.287">
+    <testcase name="Статус-код ответа должен быть 201" time="0.287" classname="RegisterAndGetTokensNoAuthCreateUsersCreateFirstUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.287" classname="RegisterAndGetTokensNoAuthCreateUsersCreateFirstUser"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / create_users / create_second_user" id="82cc0b50-984d-48c5-9b0a-713aae40c70a" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.241">
+    <testcase name="Статус-код ответа должен быть 201" time="0.241" classname="RegisterAndGetTokensNoAuthCreateUsersCreateSecondUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.241" classname="RegisterAndGetTokensNoAuthCreateUsersCreateSecondUser"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / create_users / create_third_user" id="eac92002-89eb-4de2-b615-d3ee4811e5fe" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.232">
+    <testcase name="Статус-код ответа должен быть 201" time="0.232" classname="RegisterAndGetTokensNoAuthCreateUsersCreateThirdUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.232" classname="RegisterAndGetTokensNoAuthCreateUsersCreateThirdUser"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / get_tokens / get_token_for_first_user" id="b0e9c3ca-2812-4782-92e6-dba1701e1a37" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.240">
+    <testcase name="Статус-код ответа должен быть 200" time="0.240" classname="RegisterAndGetTokensNoAuthGetTokensGetTokenForFirstUser"/>
+    <testcase name="Структура ответа соответствует ожидаемой" time="0.240" classname="RegisterAndGetTokensNoAuthGetTokensGetTokenForFirstUser"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / get_tokens / get_token_for_second_user" id="9b1140b9-666c-4523-a5fe-1c0a93e6bf32" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.239">
+    <testcase name="Статус-код ответа должен быть 200" time="0.239" classname="RegisterAndGetTokensNoAuthGetTokensGetTokenForSecondUser"/>
+    <testcase name="Структура ответа соответствует ожидаемой" time="0.239" classname="RegisterAndGetTokensNoAuthGetTokensGetTokenForSecondUser"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / create_users_bad_requests / user_registration_without_email" id="65c36247-8fad-44e6-bcfd-9ec44ba8002e" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.018">
+    <testcase name="Статус-код ответа должен быть 400" time="0.018" classname="RegisterAndGetTokensNoAuthCreateUsersBadRequestsUserRegistrationWithoutEmail"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / create_users_bad_requests / user_registration_without_username" id="6225c1fd-d33e-4714-b3c6-cebbe593f5c8" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.019">
+    <testcase name="Статус-код ответа должен быть 400" time="0.019" classname="RegisterAndGetTokensNoAuthCreateUsersBadRequestsUserRegistrationWithoutUsername"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / create_users_bad_requests / user_registration_without_first_name" id="c2435643-22a1-4e13-93b3-ec76472d28a3" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.015">
+    <testcase name="Статус-код ответа должен быть 400" time="0.015" classname="RegisterAndGetTokensNoAuthCreateUsersBadRequestsUserRegistrationWithoutFirstName"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / create_users_bad_requests / user_registration_without_last_name" id="c5f7b04b-2401-4d10-9b07-7b996e66854e" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.018">
+    <testcase name="Статус-код ответа должен быть 400" time="0.018" classname="RegisterAndGetTokensNoAuthCreateUsersBadRequestsUserRegistrationWithoutLastName"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / create_users_bad_requests / user_registration_without_password" id="eaf887c0-d7aa-44d4-8988-40b118eb8e2d" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.018">
+    <testcase name="Статус-код ответа должен быть 400" time="0.018" classname="RegisterAndGetTokensNoAuthCreateUsersBadRequestsUserRegistrationWithoutPassword"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / create_users_bad_requests / user_registration_too_long_email" id="196881aa-606d-497c-a0e3-98008a34637c" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.022">
+    <testcase name="Статус-код ответа должен быть 400" time="0.022" classname="RegisterAndGetTokensNoAuthCreateUsersBadRequestsUserRegistrationTooLongEmail"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / create_users_bad_requests / user_registration_too_long_username" id="96a6b89c-8773-4e52-99ca-bf63bf004875" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.022">
+    <testcase name="Статус-код ответа должен быть 400" time="0.022" classname="RegisterAndGetTokensNoAuthCreateUsersBadRequestsUserRegistrationTooLongUsername"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / create_users_bad_requests / user_registration_too_long_first_name" id="863782cb-298c-4481-87cb-d337a215c008" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.016">
+    <testcase name="Статус-код ответа должен быть 400" time="0.016" classname="RegisterAndGetTokensNoAuthCreateUsersBadRequestsUserRegistrationTooLongFirstName"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / create_users_bad_requests / user_registration_too_long_last_name" id="112f038a-3172-4951-b5ca-0a8659b6e493" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.017">
+    <testcase name="Статус-код ответа должен быть 400" time="0.017" classname="RegisterAndGetTokensNoAuthCreateUsersBadRequestsUserRegistrationTooLongLastName"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / create_users_bad_requests / user_registration_with_invalid_username" id="3260f538-04d7-4c72-8392-36eaf827e7e9" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.017">
+    <testcase name="Статус-код ответа должен быть 400" time="0.017" classname="RegisterAndGetTokensNoAuthCreateUsersBadRequestsUserRegistrationWithInvalidUsername"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / create_users_bad_requests / user_registration_email_in_use" id="87d84069-be5e-4de5-9a70-ebf2a15a74ca" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.016">
+    <testcase name="Статус-код ответа должен быть 400" time="0.016" classname="RegisterAndGetTokensNoAuthCreateUsersBadRequestsUserRegistrationEmailInUse"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / create_users_bad_requests / user_registration_username_in_use" id="f2718157-5e42-47ae-ac80-989b20e29e73" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.017">
+    <testcase name="Статус-код ответа должен быть 400" time="0.017" classname="RegisterAndGetTokensNoAuthCreateUsersBadRequestsUserRegistrationUsernameInUse"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / get_token_bad_requests / get_token_username_and_email_mismatch" id="327fab96-331c-42b1-9500-b4389e4bae0f" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.230">
+    <testcase name="Статус-код ответа должен быть 400" time="0.230" classname="RegisterAndGetTokensNoAuthGetTokenBadRequestsGetTokenUsernameAndEmailMismatch"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / get_token_bad_requests / get_token_no_email" id="8b54a17f-09d1-4019-9a02-0336d5410c6a" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.014">
+    <testcase name="Статус-код ответа должен быть 400" time="0.014" classname="RegisterAndGetTokensNoAuthGetTokenBadRequestsGetTokenNoEmail"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / get_token_bad_requests / get_token_no_password" id="d990e528-895a-4278-b60e-b37e58ffe35d" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.013">
+    <testcase name="Статус-код ответа должен быть 400" time="0.013" classname="RegisterAndGetTokensNoAuthGetTokenBadRequestsGetTokenNoPassword"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / logout / logout // User" id="e6ccc37e-43c5-421f-829d-cf01eb5ba4f1" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.022">
+    <testcase name="Статус-код ответа должен быть 204" time="0.022" classname="RegisterAndGetTokensNoAuthLogoutLogoutUser"/>
+  </testsuite>
+  <testsuite name="register_and_get_tokens // No Auth / logout / get_token" id="6ab8e877-7e29-4a18-8608-169f96082040" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.238">
+    <testcase name="Статус-код ответа должен быть 200" time="0.238" classname="RegisterAndGetTokensNoAuthLogoutGetToken"/>
+    <testcase name="Структура ответа соответствует ожидаемой" time="0.238" classname="RegisterAndGetTokensNoAuthLogoutGetToken"/>
+  </testsuite>
+  <testsuite name="users / get_user_info / get_user_list // No Auth" id="3baf6433-ca0e-4c87-b4b8-cbc81ce84345" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.014">
+    <testcase name="Статус-код ответа должен быть 200" time="0.014" classname="UsersGetUserInfoGetUserListNoAuth"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.014" classname="UsersGetUserInfoGetUserListNoAuth"/>
+  </testsuite>
+  <testsuite name="users / get_user_info / get_user_list// User" id="946ef25d-727a-4fae-8b01-27a64d273a50" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.023">
+    <testcase name="Статус-код ответа должен быть 200" time="0.023" classname="UsersGetUserInfoGetUserListUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.023" classname="UsersGetUserInfoGetUserListUser"/>
+  </testsuite>
+  <testsuite name="users / get_user_info / get_user_list_with_limit_param // User" id="8624825d-c46e-4ed3-abbc-76eb01a07a7b" timestamp="2025-06-09T16:13:35.159Z" tests="3" failures="0" errors="0" time="0.021">
+    <testcase name="Статус-код ответа должен быть 200" time="0.021" classname="UsersGetUserInfoGetUserListWithLimitParamUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.021" classname="UsersGetUserInfoGetUserListWithLimitParamUser"/>
+    <testcase name="Убедитесь, что можно изменить количество объектов на странице через параметр `limit`" time="0.021" classname="UsersGetUserInfoGetUserListWithLimitParamUser"/>
+  </testsuite>
+  <testsuite name="users / get_user_info / get_profile // No Auth" id="5171b4e6-dcd7-448c-82a7-b5d43b4eebf9" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.015">
+    <testcase name="Статус-код ответа должен быть 200" time="0.015" classname="UsersGetUserInfoGetProfileNoAuth"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.015" classname="UsersGetUserInfoGetProfileNoAuth"/>
+  </testsuite>
+  <testsuite name="users / get_user_info / get_profile // User" id="6e83ce2d-c38d-4316-a4ce-0474be457d1e" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.022">
+    <testcase name="Статус-код ответа должен быть 200" time="0.022" classname="UsersGetUserInfoGetProfileUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.022" classname="UsersGetUserInfoGetProfileUser"/>
+  </testsuite>
+  <testsuite name="users / get_user_info / users_me // User" id="a638ffd1-c1b8-48bb-a2e8-a8259d9dd24a" timestamp="2025-06-09T16:13:35.159Z" tests="3" failures="0" errors="0" time="0.022">
+    <testcase name="Статус-код ответа должен быть 200" time="0.022" classname="UsersGetUserInfoUsersMeUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.022" classname="UsersGetUserInfoUsersMeUser"/>
+    <testcase name="Поле `is_subscribed` в ответе должно иметь значение `false`" time="0.022" classname="UsersGetUserInfoUsersMeUser"/>
+  </testsuite>
+  <testsuite name="users / set_avatars // User / set_avatar // User" id="1fb9c244-27f7-4347-9eef-eb8a80343dd9" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.073">
+    <testcase name="Статус-код ответа должен быть 200" time="0.073" classname="UsersSetAvatarsUserSetAvatarUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.073" classname="UsersSetAvatarsUserSetAvatarUser"/>
+  </testsuite>
+  <testsuite name="users / set_avatars // User / check_avatar_is_set // User" id="f7110127-6736-487e-b63a-c69845b798b6" timestamp="2025-06-09T16:13:35.159Z" tests="3" failures="0" errors="0" time="0.020">
+    <testcase name="Статус-код ответа должен быть 200" time="0.020" classname="UsersSetAvatarsUserCheckAvatarIsSetUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.020" classname="UsersSetAvatarsUserCheckAvatarIsSetUser"/>
+    <testcase name="Поле `avatar` должно содержать ссылку на аватар" time="0.020" classname="UsersSetAvatarsUserCheckAvatarIsSetUser"/>
+  </testsuite>
+  <testsuite name="users / reset_password / reset_password // User" id="8ecd74a8-f3d4-4860-b204-69a8c8a066a9" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.470">
+    <testcase name="Статус-код ответа должен быть 204" time="0.470" classname="UsersResetPasswordResetPasswordUser"/>
+  </testsuite>
+  <testsuite name="users / reset_password / get_token_with_new_password" id="0527ed8d-1be3-4425-b675-c6468272d967" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.257">
+    <testcase name="Статус-код ответа должен быть 200" time="0.257" classname="UsersResetPasswordGetTokenWithNewPassword"/>
+    <testcase name="Структура ответа соответствует ожидаемой" time="0.257" classname="UsersResetPasswordGetTokenWithNewPassword"/>
+  </testsuite>
+  <testsuite name="users / reset_password / roll_back_password // User" id="9b9f041e-bade-471d-b235-bf7b6b1a8167" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.453">
+    <testcase name="Статус-код ответа должен быть 204" time="0.453" classname="UsersResetPasswordRollBackPasswordUser"/>
+  </testsuite>
+  <testsuite name="users / reset_password / get_token_for_first_user" id="a1c361d5-f39f-418d-b1f7-fe11f36ea9d9" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.233">
+    <testcase name="Статус-код ответа должен быть 200" time="0.233" classname="UsersResetPasswordGetTokenForFirstUser"/>
+    <testcase name="Структура ответа соответствует ожидаемой" time="0.233" classname="UsersResetPasswordGetTokenForFirstUser"/>
+  </testsuite>
+  <testsuite name="users / users_bad_requests / users_me // No Auth" id="f55c436d-3f8a-4936-9970-8543019b9717" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.005">
+    <testcase name="Статус-код ответа должен быть 401" time="0.005" classname="UsersUsersBadRequestsUsersMeNoAuth"/>
+  </testsuite>
+  <testsuite name="users / users_bad_requests / get_non_existing_profile // User" id="838874e1-64f3-4001-b99d-71ed52b4f2c8" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.017">
+    <testcase name="Статус-код ответа должен быть 404" time="0.017" classname="UsersUsersBadRequestsGetNonExistingProfileUser"/>
+  </testsuite>
+  <testsuite name="users / users_bad_requests / reset_password_wrong_password // User" id="a0e9cedb-ef70-4a11-bd2e-0fcbab98ee4d" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.237">
+    <testcase name="Статус-код ответа должен быть 400" time="0.237" classname="UsersUsersBadRequestsResetPasswordWrongPasswordUser"/>
+  </testsuite>
+  <testsuite name="users / users_bad_requests / delete_avatar // No Auth" id="a7629d8f-3bea-4974-bec4-0daa2ed79fb4" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.005">
+    <testcase name="Статус-код ответа должен быть 401" time="0.005" classname="UsersUsersBadRequestsDeleteAvatarNoAuth"/>
+  </testsuite>
+  <testsuite name="users / users_bad_requests / set_avatar // No Auth" id="d3c1f39b-4c02-4f95-9ab0-a83a84464d1a" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.006">
+    <testcase name="Статус-код ответа должен быть 401" time="0.006" classname="UsersUsersBadRequestsSetAvatarNoAuth"/>
+  </testsuite>
+  <testsuite name="users / users_bad_requests / set_avatar_empty_body // User" id="87f0b689-f035-4476-a34f-39b8d88da896" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.016">
+    <testcase name="Статус-код ответа должен быть 400" time="0.016" classname="UsersUsersBadRequestsSetAvatarEmptyBodyUser"/>
+  </testsuite>
+  <testsuite name="users / delete_avatar // User / delete_avatar // User" id="a9e6364e-2e9f-43cf-9d37-4ea23484d8ce" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.022">
+    <testcase name="Статус-код ответа должен быть 204" time="0.022" classname="UsersDeleteAvatarUserDeleteAvatarUser"/>
+  </testsuite>
+  <testsuite name="users / delete_avatar // User / check_avatar_is_deleted // User" id="ada596ee-6396-4ae9-9aeb-7f2b4b4692f8" timestamp="2025-06-09T16:13:35.159Z" tests="3" failures="0" errors="0" time="0.020">
+    <testcase name="Статус-код ответа должен быть 200" time="0.020" classname="UsersDeleteAvatarUserCheckAvatarIsDeletedUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.020" classname="UsersDeleteAvatarUserCheckAvatarIsDeletedUser"/>
+    <testcase name="Поле `avatar` должно быть пустым" time="0.020" classname="UsersDeleteAvatarUserCheckAvatarIsDeletedUser"/>
+  </testsuite>
+  <testsuite name="ingredients / get_ingradients / get_ingredients_list // No Auth" id="ce7999c6-6ea3-4e7c-89d5-2073b7ecdecb" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.029">
+    <testcase name="Статус-код ответа должен быть 200" time="0.029" classname="IngredientsGetIngradientsGetIngredientsListNoAuth"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.029" classname="IngredientsGetIngradientsGetIngredientsListNoAuth"/>
+  </testsuite>
+  <testsuite name="ingredients / get_ingradients / get_ingredients_list // User" id="a0a14234-1e84-4051-8e5e-93bc00ac0658" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.031">
+    <testcase name="Статус-код ответа должен быть 200" time="0.031" classname="IngredientsGetIngradientsGetIngredientsListUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.031" classname="IngredientsGetIngradientsGetIngredientsListUser"/>
+  </testsuite>
+  <testsuite name="ingredients / get_ingradients / get_ingredients_list_with_name_filter // User" id="31d3ff97-1a58-4396-b7ea-83765422d615" timestamp="2025-06-09T16:13:35.159Z" tests="3" failures="1" errors="0" time="0.036">
+    <testcase name="Статус-код ответа должен быть 200" time="0.036" classname="IngredientsGetIngradientsGetIngredientsListWithNameFilterUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.036" classname="IngredientsGetIngradientsGetIngredientsListWithNameFilterUser"/>
+    <testcase name="Ответ должен содержать данные, удовлетворяющие условиям поиска" time="0.036" classname="IngredientsGetIngradientsGetIngredientsListWithNameFilterUser">
+      <failure type="AssertionFailure" message="Ответ должен содержать ингредиенты, начало названия которых совпадает со значением квери-параметра `name`: expected false to be true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 530f87e9-6f95-42da-8389-5a431b9dc149.]]>
+        <![CDATA[Collection name: diploma.]]>
+        <![CDATA[Request name: ingredients / get_ingradients / get_ingredients_list_with_name_filter // User.]]>
+        <![CDATA[Test description: Ответ должен содержать данные, удовлетворяющие условиям поиска.]]>
+        <![CDATA[Error message: Ответ должен содержать ингредиенты, начало названия которых совпадает со значением квери-параметра `name`: expected false to be true.]]>
+        <![CDATA[Stacktrace: AssertionError: Ответ должен содержать ингредиенты, начало названия которых совпадает со значением квери-параметра `name`: expected false to be true
+   at Object.eval sandbox-script.js:3:45).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="ingredients / get_ingradients / get_ingredient // No Auth" id="58c7a3d0-db84-437c-8945-c62bc2d053de" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.016">
+    <testcase name="Статус-код ответа должен быть 200" time="0.016" classname="IngredientsGetIngradientsGetIngredientNoAuth"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.016" classname="IngredientsGetIngradientsGetIngredientNoAuth"/>
+  </testsuite>
+  <testsuite name="ingredients / get_ingradients / get_ingredient // User" id="0c83c379-5fe7-401f-897c-196518d1b99b" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.019">
+    <testcase name="Статус-код ответа должен быть 200" time="0.019" classname="IngredientsGetIngradientsGetIngredientUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.019" classname="IngredientsGetIngradientsGetIngredientUser"/>
+  </testsuite>
+  <testsuite name="ingredients / ingredients_bad_requests / get_non_existing_ingredient // User" id="813a5c49-f903-491e-ab8b-dc66d5e294bb" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.018">
+    <testcase name="Статус-код ответа должен быть 404" time="0.018" classname="IngredientsIngredientsBadRequestsGetNonExistingIngredientUser"/>
+  </testsuite>
+  <testsuite name="ingredients / ingredients_bad_requests / create_ingredient // User" id="b5791826-8e29-4ee7-800c-4280c140156c" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.016">
+    <testcase name="Статус-код ответа должен быть 405" time="0.016" classname="IngredientsIngredientsBadRequestsCreateIngredientUser"/>
+  </testsuite>
+  <testsuite name="ingredients / ingredients_bad_requests / put_ingredient // User" id="d7c16946-6f69-4f31-b722-855f9ed08d0a" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.018">
+    <testcase name="Статус-код ответа должен быть 405" time="0.018" classname="IngredientsIngredientsBadRequestsPutIngredientUser"/>
+  </testsuite>
+  <testsuite name="ingredients / ingredients_bad_requests / patch_ingredient // User" id="c289795c-7dda-4659-9899-c2eedf43cd69" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.019">
+    <testcase name="Статус-код ответа должен быть 405" time="0.019" classname="IngredientsIngredientsBadRequestsPatchIngredientUser"/>
+  </testsuite>
+  <testsuite name="ingredients / ingredients_bad_requests / delete_ingredient // User" id="12bb9f71-6167-415a-a991-9cae0ffb3748" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.019">
+    <testcase name="Статус-код ответа должен быть 405" time="0.019" classname="IngredientsIngredientsBadRequestsDeleteIngredientUser"/>
+  </testsuite>
+  <testsuite name="recipes / create_recipes / create_first_recipe // Second User" id="a3071250-381f-4584-b48c-3d8b32672059" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.040">
+    <testcase name="Статус-код ответа должен быть 201" time="0.040" classname="RecipesCreateRecipesCreateFirstRecipeSecondUser"/>
+    <testcase name="Структура ответа должна соответстовать ожидаемой" time="0.040" classname="RecipesCreateRecipesCreateFirstRecipeSecondUser"/>
+  </testsuite>
+  <testsuite name="recipes / create_recipes / create_second_recipe // Second User" id="8f14af66-3713-43f3-946f-1ebbf1deb27c" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.032">
+    <testcase name="Статус-код ответа должен быть 201" time="0.032" classname="RecipesCreateRecipesCreateSecondRecipeSecondUser"/>
+    <testcase name="Структура ответа должна соответстовать ожидаемой" time="0.032" classname="RecipesCreateRecipesCreateSecondRecipeSecondUser"/>
+  </testsuite>
+  <testsuite name="recipes / create_recipes / create_third_recipe // Second User" id="eced62cb-d354-40fc-9728-e5b06a6a803e" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.035">
+    <testcase name="Статус-код ответа должен быть 201" time="0.035" classname="RecipesCreateRecipesCreateThirdRecipeSecondUser"/>
+    <testcase name="Структура ответа должна соответстовать ожидаемой" time="0.035" classname="RecipesCreateRecipesCreateThirdRecipeSecondUser"/>
+  </testsuite>
+  <testsuite name="recipes / create_recipes / create_fourth_recipe // Second User" id="452e2608-d160-4154-a456-ebf9fa6c1495" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.029">
+    <testcase name="Статус-код ответа должен быть 201" time="0.029" classname="RecipesCreateRecipesCreateFourthRecipeSecondUser"/>
+    <testcase name="Структура ответа должна соответстовать ожидаемой" time="0.029" classname="RecipesCreateRecipesCreateFourthRecipeSecondUser"/>
+  </testsuite>
+  <testsuite name="recipes / create_recipes / create_fifth_recipe // User" id="cb37685b-a174-43af-a8a8-cc635d5e3c72" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.038">
+    <testcase name="Статус-код ответа должен быть 201" time="0.038" classname="RecipesCreateRecipesCreateFifthRecipeUser"/>
+    <testcase name="Структура ответа должна соответстовать ожидаемой" time="0.038" classname="RecipesCreateRecipesCreateFifthRecipeUser"/>
+  </testsuite>
+  <testsuite name="recipes / get_recipes / get_recipes_list // No Auth" id="53016bd6-4298-4529-8cf6-676e5b7984fc" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.034">
+    <testcase name="Статус-код ответа должен быть 200" time="0.034" classname="RecipesGetRecipesGetRecipesListNoAuth"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.034" classname="RecipesGetRecipesGetRecipesListNoAuth"/>
+  </testsuite>
+  <testsuite name="recipes / get_recipes / get_recipes_list // User" id="94cd0e1d-c740-4d6a-a033-7a890b3b0a30" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.043">
+    <testcase name="Статус-код ответа должен быть 200" time="0.043" classname="RecipesGetRecipesGetRecipesListUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.043" classname="RecipesGetRecipesGetRecipesListUser"/>
+  </testsuite>
+  <testsuite name="recipes / get_recipes / get_recipes_list_with_limit_param // User" id="90da5f4b-853b-48ea-9fe2-c020f2aadd2c" timestamp="2025-06-09T16:13:35.159Z" tests="3" failures="0" errors="0" time="0.035">
+    <testcase name="Статус-код ответа должен быть 200" time="0.035" classname="RecipesGetRecipesGetRecipesListWithLimitParamUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.035" classname="RecipesGetRecipesGetRecipesListWithLimitParamUser"/>
+    <testcase name="Должна быть возможность изменить количество объектов на странице через параметр `limit`" time="0.035" classname="RecipesGetRecipesGetRecipesListWithLimitParamUser"/>
+  </testsuite>
+  <testsuite name="recipes / get_recipes / get_recipes_list_with_author_param // User" id="85266b3d-b7df-4f6e-b6c3-38aa32633702" timestamp="2025-06-09T16:13:35.159Z" tests="3" failures="0" errors="0" time="0.031">
+    <testcase name="Статус-код ответа должен быть 200" time="0.031" classname="RecipesGetRecipesGetRecipesListWithAuthorParamUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.031" classname="RecipesGetRecipesGetRecipesListWithAuthorParamUser"/>
+    <testcase name="Должна быть возможность фильтрации рецептов через параметр запроса `author`" time="0.031" classname="RecipesGetRecipesGetRecipesListWithAuthorParamUser"/>
+  </testsuite>
+  <testsuite name="recipes / get_recipes / get_recipe_detail // No Auth" id="63e7427a-d0b9-4eac-a486-c65419f206de" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.026">
+    <testcase name="Статус-код ответа должен быть 200" time="0.026" classname="RecipesGetRecipesGetRecipeDetailNoAuth"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.026" classname="RecipesGetRecipesGetRecipeDetailNoAuth"/>
+  </testsuite>
+  <testsuite name="recipes / get_recipes / get_recipe_detail // User" id="242b4a7c-cac5-4492-945c-93bc1c2aa8c1" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.021">
+    <testcase name="Статус-код ответа должен быть 200" time="0.021" classname="RecipesGetRecipesGetRecipeDetailUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.021" classname="RecipesGetRecipesGetRecipeDetailUser"/>
+  </testsuite>
+  <testsuite name="recipes / get_recipe_short_link / get_recipe_short_link // User" id="bbfe4649-b91c-4024-b82b-0eebb1280a04" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.021">
+    <testcase name="Статус-код ответа должен быть 200" time="0.021" classname="RecipesGetRecipeShortLinkGetRecipeShortLinkUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.021" classname="RecipesGetRecipeShortLinkGetRecipeShortLinkUser"/>
+  </testsuite>
+  <testsuite name="recipes / get_recipe_short_link / get_recipe_short_link // No Auth" id="d9a8ba94-d39c-458f-9885-d1ed7f081256" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.015">
+    <testcase name="Статус-код ответа должен быть 200" time="0.015" classname="RecipesGetRecipeShortLinkGetRecipeShortLinkNoAuth"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.015" classname="RecipesGetRecipeShortLinkGetRecipeShortLinkNoAuth"/>
+  </testsuite>
+  <testsuite name="recipes / update_recipes / update_recipe // Second User" id="7232a77f-0e98-413b-b9b0-a1658ce0f676" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.057">
+    <testcase name="Статус-код ответа должен быть 200" time="0.057" classname="RecipesUpdateRecipesUpdateRecipeSecondUser"/>
+    <testcase name="Структура ответа соответствует ожидаемой" time="0.057" classname="RecipesUpdateRecipesUpdateRecipeSecondUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / create_recipe_bad_requests / create_recipe_without_ingredients // User" id="58dbe524-ff97-467a-9f64-95bd33c37d3b" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.022">
+    <testcase name="Статус-код ответа должен быть 400" time="0.022" classname="RecipesRecipesBadRequestsCreateRecipeBadRequestsCreateRecipeWithoutIngredientsUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / create_recipe_bad_requests / create_recipe_empty_ingredients_fields // User" id="5959e915-d6ae-41b9-b269-362574c69332" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.018">
+    <testcase name="Статус-код ответа должен быть 400" time="0.018" classname="RecipesRecipesBadRequestsCreateRecipeBadRequestsCreateRecipeEmptyIngredientsFieldsUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / create_recipe_bad_requests / create_recipe_with_non_existing_ingredient // User" id="268740aa-8dc2-462a-a1ee-c5b734cb9e8b" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.018">
+    <testcase name="Статус-код ответа должен быть 400" time="0.018" classname="RecipesRecipesBadRequestsCreateRecipeBadRequestsCreateRecipeWithNonExistingIngredientUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / create_recipe_bad_requests / create_recipe_with_ingredient_amount_less_than_one // User" id="572f0af8-2ade-4f69-9af0-6bb402f94bd3" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.019">
+    <testcase name="Статус-код ответа должен быть 400" time="0.019" classname="RecipesRecipesBadRequestsCreateRecipeBadRequestsCreateRecipeWithIngredientAmountLessThanOneUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / create_recipe_bad_requests / create_recipe_with_repetitive_ingredients // User" id="a0311cc0-1818-4f03-ab5a-7af201d13e39" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.026">
+    <testcase name="Статус-код ответа должен быть 400" time="0.026" classname="RecipesRecipesBadRequestsCreateRecipeBadRequestsCreateRecipeWithRepetitiveIngredientsUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / create_recipe_bad_requests / create_recipe_without_image_field // User" id="e57d8594-b72d-4c27-91e5-a8399e2b1e26" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.018">
+    <testcase name="Статус-код ответа должен быть 400" time="0.018" classname="RecipesRecipesBadRequestsCreateRecipeBadRequestsCreateRecipeWithoutImageFieldUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / create_recipe_bad_requests / create_recipe_empty_image // User" id="4f8066e6-cae5-46ea-8e21-85e9ccff8428" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.018">
+    <testcase name="Статус-код ответа должен быть 400" time="0.018" classname="RecipesRecipesBadRequestsCreateRecipeBadRequestsCreateRecipeEmptyImageUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / create_recipe_bad_requests / create_recipe_without_name_field // User" id="7d4d97fe-a119-4b2d-ab2a-50c3db92bb31" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.019">
+    <testcase name="Статус-код ответа должен быть 400" time="0.019" classname="RecipesRecipesBadRequestsCreateRecipeBadRequestsCreateRecipeWithoutNameFieldUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / create_recipe_bad_requests / create_recipe_empty_name // User" id="b4c6821b-e16c-4a94-b971-e43df5ac96f1" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.017">
+    <testcase name="Статус-код ответа должен быть 400" time="0.017" classname="RecipesRecipesBadRequestsCreateRecipeBadRequestsCreateRecipeEmptyNameUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / create_recipe_bad_requests / create_recipe_too_long_name // User" id="5adda6be-3412-4d2d-9f15-ea8e311ff5ad" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.017">
+    <testcase name="Статус-код ответа должен быть 400" time="0.017" classname="RecipesRecipesBadRequestsCreateRecipeBadRequestsCreateRecipeTooLongNameUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / create_recipe_bad_requests / create_recipe_without_text_field // User" id="54d47d61-947c-4fa4-866d-04dbf3bfe26a" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.018">
+    <testcase name="Статус-код ответа должен быть 400" time="0.018" classname="RecipesRecipesBadRequestsCreateRecipeBadRequestsCreateRecipeWithoutTextFieldUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / create_recipe_bad_requests / create_recipe_empty_text // User" id="db852a69-b180-4403-bcd1-dadf83c4f808" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.017">
+    <testcase name="Статус-код ответа должен быть 400" time="0.017" classname="RecipesRecipesBadRequestsCreateRecipeBadRequestsCreateRecipeEmptyTextUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / create_recipe_bad_requests / create_recipe_without_cooking_time_field // User" id="8b8f925d-7b95-41ab-b148-656bc48e5003" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.017">
+    <testcase name="Статус-код ответа должен быть 400" time="0.017" classname="RecipesRecipesBadRequestsCreateRecipeBadRequestsCreateRecipeWithoutCookingTimeFieldUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / create_recipe_bad_requests / create_recipe_empty_string_as_cooking_time // User" id="993bae35-773a-44d7-a716-73e2fbea5a41" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.017">
+    <testcase name="Статус-код ответа должен быть 400" time="0.017" classname="RecipesRecipesBadRequestsCreateRecipeBadRequestsCreateRecipeEmptyStringAsCookingTimeUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / create_recipe_bad_requests / create_recipe_cooking_time_less_than_one // User" id="92822bed-6237-4f50-a040-5a0c2c49353e" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.021">
+    <testcase name="Статус-код ответа должен быть 400" time="0.021" classname="RecipesRecipesBadRequestsCreateRecipeBadRequestsCreateRecipeCookingTimeLessThanOneUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / create_recipe_bad_requests / create_recipe // No Auth" id="6f1db533-8608-45f8-8686-8e5c9a7f1656" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.006">
+    <testcase name="Статус-код ответа должен быть 401" time="0.006" classname="RecipesRecipesBadRequestsCreateRecipeBadRequestsCreateRecipeNoAuth"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / update_recipe_bad_requests / update_recipe_not_author // User" id="c011d8ec-56b2-47c4-b5ef-81cead20cc3a" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.027">
+    <testcase name="Статус-код ответа должен быть 403" time="0.027" classname="RecipesRecipesBadRequestsUpdateRecipeBadRequestsUpdateRecipeNotAuthorUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / update_recipe_bad_requests / update_recipe // No Auth" id="86b9407d-6115-4337-a765-3bf33ca7e8b4" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.016">
+    <testcase name="Статус-код ответа должен быть 401" time="0.016" classname="RecipesRecipesBadRequestsUpdateRecipeBadRequestsUpdateRecipeNoAuth"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / update_recipe_bad_requests / update_recipe_without_ingredients_field // Second User" id="e5f49152-a0db-4143-b43b-f8d5384c4965" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.022">
+    <testcase name="Статус-код ответа должен быть 400" time="0.022" classname="RecipesRecipesBadRequestsUpdateRecipeBadRequestsUpdateRecipeWithoutIngredientsFieldSecondUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / update_recipe_bad_requests / update_recipe_empty_ingredients // Second User" id="6de2dfc4-13d6-4c4b-b3d5-3c31a51616aa" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.024">
+    <testcase name="Статус-код ответа должен быть 400" time="0.024" classname="RecipesRecipesBadRequestsUpdateRecipeBadRequestsUpdateRecipeEmptyIngredientsSecondUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / update_recipe_bad_requests / update_recipe_with_non_existing_ingredient // Second User" id="544a3935-5d54-406e-942b-4b9811fcf9af" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.022">
+    <testcase name="Статус-код ответа должен быть 400" time="0.022" classname="RecipesRecipesBadRequestsUpdateRecipeBadRequestsUpdateRecipeWithNonExistingIngredientSecondUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / update_recipe_bad_requests / update_recipe_with_ingredient_amount_less_than_one // Second User" id="44e5442c-4097-4223-8270-0c518ef1f1b6" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.022">
+    <testcase name="Статус-код ответа должен быть 400" time="0.022" classname="RecipesRecipesBadRequestsUpdateRecipeBadRequestsUpdateRecipeWithIngredientAmountLessThanOneSecondUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / update_recipe_bad_requests / update_recipe_with_repetitive_ingredients // Second User" id="5c5420d3-d777-489b-9eec-3b1c3e66afb1" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.022">
+    <testcase name="Статус-код ответа должен быть 400" time="0.022" classname="RecipesRecipesBadRequestsUpdateRecipeBadRequestsUpdateRecipeWithRepetitiveIngredientsSecondUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / update_recipe_bad_requests / update_recipe_empty_image  // Second User" id="e6bacf29-fdf3-438f-ad92-8ee9b2287e8e" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.024">
+    <testcase name="Статус-код ответа должен быть 400" time="0.024" classname="RecipesRecipesBadRequestsUpdateRecipeBadRequestsUpdateRecipeEmptyImageSecondUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / update_recipe_bad_requests / update_recipe_empty_name  // Second User" id="bc9f4c59-e159-4620-86fd-2d6f8fc2f387" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.027">
+    <testcase name="Статус-код ответа должен быть 400" time="0.027" classname="RecipesRecipesBadRequestsUpdateRecipeBadRequestsUpdateRecipeEmptyNameSecondUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / update_recipe_bad_requests / update_recipe_too_long_name  // Second User" id="ef33f460-a2bd-4eee-b1cf-a387f741076e" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.022">
+    <testcase name="Статус-код ответа должен быть 400" time="0.022" classname="RecipesRecipesBadRequestsUpdateRecipeBadRequestsUpdateRecipeTooLongNameSecondUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / update_recipe_bad_requests / update_recipe_empty_text  // Second User" id="fe63437a-5b29-4512-9443-aaf889a65702" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.025">
+    <testcase name="Статус-код ответа должен быть 400" time="0.025" classname="RecipesRecipesBadRequestsUpdateRecipeBadRequestsUpdateRecipeEmptyTextSecondUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / update_recipe_bad_requests / update_recipe_empty_string_as_cooking_time  // Second User" id="da24e554-30dc-47ea-9730-c58e19a41eeb" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.023">
+    <testcase name="Статус-код ответа должен быть 400" time="0.023" classname="RecipesRecipesBadRequestsUpdateRecipeBadRequestsUpdateRecipeEmptyStringAsCookingTimeSecondUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / update_recipe_bad_requests / update_recipe_empty_cooking_time_less_than_one  // Second User" id="59936016-98e7-4692-809c-33f1cde67d18" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.029">
+    <testcase name="Статус-код ответа должен быть 400" time="0.029" classname="RecipesRecipesBadRequestsUpdateRecipeBadRequestsUpdateRecipeEmptyCookingTimeLessThanOneSecondUser"/>
+  </testsuite>
+  <testsuite name="recipes / recipes_bad_requests / update_recipe_bad_requests / update_none_existing_recipe // Second User" id="31274702-37ab-4876-a75b-fe0e5a57ab6d" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.017">
+    <testcase name="Статус-код ответа должен быть 404" time="0.017" classname="RecipesRecipesBadRequestsUpdateRecipeBadRequestsUpdateNoneExistingRecipeSecondUser"/>
+  </testsuite>
+  <testsuite name="subscriptions / create_subscriptions / create_subscription // User" id="aeb142bf-2ac8-4461-bd0d-b83f8b1a8f62" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.028">
+    <testcase name="Статус-код ответа должен быть 201" time="0.028" classname="SubscriptionsCreateSubscriptionsCreateSubscriptionUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.028" classname="SubscriptionsCreateSubscriptionsCreateSubscriptionUser"/>
+  </testsuite>
+  <testsuite name="subscriptions / create_subscriptions / create_subscription_with_recipes_limit_param // User" id="04a1a558-aa60-4984-99a9-b14203a6820e" timestamp="2025-06-09T16:13:35.159Z" tests="3" failures="0" errors="0" time="0.031">
+    <testcase name="Статус-код ответа должен быть 201" time="0.031" classname="SubscriptionsCreateSubscriptionsCreateSubscriptionWithRecipesLimitParamUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.031" classname="SubscriptionsCreateSubscriptionsCreateSubscriptionWithRecipesLimitParamUser"/>
+    <testcase name="Должна быть возможность изменить количество выводимых рецептов в данных пользователя через параметр `recipes_limit`" time="0.031" classname="SubscriptionsCreateSubscriptionsCreateSubscriptionWithRecipesLimitParamUser"/>
+  </testsuite>
+  <testsuite name="subscriptions / get_subscriptions / get_subscription_list // User" id="967d09a7-a203-4225-b04b-4831a2cde43f" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.025">
+    <testcase name="Статус-код ответа должен быть 200" time="0.025" classname="SubscriptionsGetSubscriptionsGetSubscriptionListUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.025" classname="SubscriptionsGetSubscriptionsGetSubscriptionListUser"/>
+  </testsuite>
+  <testsuite name="subscriptions / get_subscriptions / get_subscription_list_with_limit_param // User" id="77d88688-e456-4e5b-9c0e-e58a52c598a7" timestamp="2025-06-09T16:13:35.159Z" tests="3" failures="0" errors="0" time="0.024">
+    <testcase name="Статус-код ответа должен быть 200" time="0.024" classname="SubscriptionsGetSubscriptionsGetSubscriptionListWithLimitParamUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.024" classname="SubscriptionsGetSubscriptionsGetSubscriptionListWithLimitParamUser"/>
+    <testcase name="Должна быть возможность изменить количество объектов на странице через параметр запроса `limit`" time="0.024" classname="SubscriptionsGetSubscriptionsGetSubscriptionListWithLimitParamUser"/>
+  </testsuite>
+  <testsuite name="subscriptions / get_subscriptions / get_subscription_list_with_recipes_limit_param // User" id="55540704-b3e4-4b4a-a1af-413c4043ba2c" timestamp="2025-06-09T16:13:35.159Z" tests="3" failures="0" errors="0" time="0.024">
+    <testcase name="Статус-код ответа должен быть 200" time="0.024" classname="SubscriptionsGetSubscriptionsGetSubscriptionListWithRecipesLimitParamUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.024" classname="SubscriptionsGetSubscriptionsGetSubscriptionListWithRecipesLimitParamUser"/>
+    <testcase name="Убедитесь, что количество выводимых рецептов в данных пользователя можно изменить через параметр `recipes_limit`" time="0.024" classname="SubscriptionsGetSubscriptionsGetSubscriptionListWithRecipesLimitParamUser"/>
+  </testsuite>
+  <testsuite name="subscriptions / subscription_bad_requests / create_subscription // No Auth" id="2c5ff1b6-4255-4731-ac37-dbb11864a0f9" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.005">
+    <testcase name="Статус-код ответа должен быть 401" time="0.005" classname="SubscriptionsSubscriptionBadRequestsCreateSubscriptionNoAuth"/>
+  </testsuite>
+  <testsuite name="subscriptions / subscription_bad_requests / create_duplicated_subscription // User" id="8a99fc0a-fa1f-436c-bf92-4a6c036d5c89" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.024">
+    <testcase name="Статус-код ответа должен быть 400" time="0.024" classname="SubscriptionsSubscriptionBadRequestsCreateDuplicatedSubscriptionUser"/>
+  </testsuite>
+  <testsuite name="subscriptions / subscription_bad_requests / create_self_subscription // User" id="f4bdaad2-dd09-4e68-9b3a-4a68a95093fe" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.017">
+    <testcase name="Статус-код ответа должен быть 400" time="0.017" classname="SubscriptionsSubscriptionBadRequestsCreateSelfSubscriptionUser"/>
+  </testsuite>
+  <testsuite name="subscriptions / subscription_bad_requests / create_subscription_to_non_existing_author // User" id="03783401-e88e-4857-8018-b2a7d76752fe" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.016">
+    <testcase name="Статус-код ответа должен быть 404" time="0.016" classname="SubscriptionsSubscriptionBadRequestsCreateSubscriptionToNonExistingAuthorUser"/>
+  </testsuite>
+  <testsuite name="shopping_cart / add_to_shopping_cart / add_to_shopping_cart // User" id="889f0388-1efe-455c-8b87-0178b9e9cfd9" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.024">
+    <testcase name="Статус-код ответа должен быть 201" time="0.024" classname="ShoppingCartAddToShoppingCartAddToShoppingCartUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.024" classname="ShoppingCartAddToShoppingCartAddToShoppingCartUser"/>
+  </testsuite>
+  <testsuite name="shopping_cart / download_shopping_cart / download_shopping_cart // User" id="f3a6d8f9-a1b6-41bd-9941-07fb616402e8" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.022">
+    <testcase name="Статус-код ответа должен быть 200" time="0.022" classname="ShoppingCartDownloadShoppingCartDownloadShoppingCartUser"/>
+  </testsuite>
+  <testsuite name="shopping_cart / shopping_cart_bad_requests / add_to_shopping_cart // No Auth" id="2e630f71-6e51-4308-a88d-188e9c415dfb" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.004">
+    <testcase name="Статус-код ответа должен быть 401" time="0.004" classname="ShoppingCartShoppingCartBadRequestsAddToShoppingCartNoAuth"/>
+  </testsuite>
+  <testsuite name="shopping_cart / shopping_cart_bad_requests / add_again_to_shopping_cart // User" id="41318396-1875-45ba-86ff-70352d17f955" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.021">
+    <testcase name="Статус-код ответа должен быть 400" time="0.021" classname="ShoppingCartShoppingCartBadRequestsAddAgainToShoppingCartUser"/>
+  </testsuite>
+  <testsuite name="shopping_cart / shopping_cart_bad_requests / add_non_existing_recipe_to_shopping_cart // User" id="4df1700e-afba-4bda-86bc-d32d0e8e6e61" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.023">
+    <testcase name="Статус-код ответа должен быть 404" time="0.023" classname="ShoppingCartShoppingCartBadRequestsAddNonExistingRecipeToShoppingCartUser"/>
+  </testsuite>
+  <testsuite name="favorite / add_to_favorite / add_to_favorite // User" id="eec565cc-d556-4bd3-97c6-709f0397108f" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.024">
+    <testcase name="Статус-код ответа должен быть 201" time="0.024" classname="FavoriteAddToFavoriteAddToFavoriteUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.024" classname="FavoriteAddToFavoriteAddToFavoriteUser"/>
+  </testsuite>
+  <testsuite name="favorite / favorite_bad_requests / add_to_favorite // No Auth" id="fdd29f46-2d73-4382-8c57-c2399a343add" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.007">
+    <testcase name="Статус-код ответа должен быть 401" time="0.007" classname="FavoriteFavoriteBadRequestsAddToFavoriteNoAuth"/>
+  </testsuite>
+  <testsuite name="favorite / favorite_bad_requests / add_again_to_favorite // User" id="5db51307-caae-4345-85c7-64cdb7d12a13" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.020">
+    <testcase name="Статус-код ответа должен быть 400" time="0.020" classname="FavoriteFavoriteBadRequestsAddAgainToFavoriteUser"/>
+  </testsuite>
+  <testsuite name="favorite / favorite_bad_requests / add_non_existing_recipe_to_favorite // User" id="f8fd7846-5070-405f-99a3-c2418124da23" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.022">
+    <testcase name="Статус-код ответа должен быть 404" time="0.022" classname="FavoriteFavoriteBadRequestsAddNonExistingRecipeToFavoriteUser"/>
+  </testsuite>
+  <testsuite name="recipe_filters_for_favorite_and_shopping_cart / get_recipes_list_with_is_in_shopping_cart_param // User" id="9858e117-a64a-45ed-98fa-34b1f71208c2" timestamp="2025-06-09T16:13:35.159Z" tests="3" failures="0" errors="0" time="0.028">
+    <testcase name="Статус-код ответа должен быть 200" time="0.028" classname="RecipeFiltersForFavoriteAndShoppingCartGetRecipesListWithIsInShoppingCartParamUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.028" classname="RecipeFiltersForFavoriteAndShoppingCartGetRecipesListWithIsInShoppingCartParamUser"/>
+    <testcase name="Должна быть возможность фильтровать рецепты через параметр запроса `is_in_shopping_cart`" time="0.028" classname="RecipeFiltersForFavoriteAndShoppingCartGetRecipesListWithIsInShoppingCartParamUser"/>
+  </testsuite>
+  <testsuite name="recipe_filters_for_favorite_and_shopping_cart / get_recipes_list_with_is_in_shopping_cart_param // No Auth" id="a4c99ef2-908f-483b-b00d-fe403248e0fd" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.030">
+    <testcase name="Статус-код ответа должен быть 200" time="0.030" classname="RecipeFiltersForFavoriteAndShoppingCartGetRecipesListWithIsInShoppingCartParamNoAuth"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.030" classname="RecipeFiltersForFavoriteAndShoppingCartGetRecipesListWithIsInShoppingCartParamNoAuth"/>
+  </testsuite>
+  <testsuite name="recipe_filters_for_favorite_and_shopping_cart / get_recipes_list_with_is_favorited_param // User" id="08ceefc2-54d7-4982-98af-e0a47f99b329" timestamp="2025-06-09T16:13:35.159Z" tests="3" failures="0" errors="0" time="0.028">
+    <testcase name="Статус-код ответа должен быть 200" time="0.028" classname="RecipeFiltersForFavoriteAndShoppingCartGetRecipesListWithIsFavoritedParamUser"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.028" classname="RecipeFiltersForFavoriteAndShoppingCartGetRecipesListWithIsFavoritedParamUser"/>
+    <testcase name="Должна быть возможность фильтровать рецепты через параметр запроса `is_favorited`" time="0.028" classname="RecipeFiltersForFavoriteAndShoppingCartGetRecipesListWithIsFavoritedParamUser"/>
+  </testsuite>
+  <testsuite name="recipe_filters_for_favorite_and_shopping_cart / get_recipes_list_with_is_favorited_param // No Auth" id="5b995823-089a-45f7-96d8-af802a2401f6" timestamp="2025-06-09T16:13:35.159Z" tests="2" failures="0" errors="0" time="0.033">
+    <testcase name="Статус-код ответа должен быть 200" time="0.033" classname="RecipeFiltersForFavoriteAndShoppingCartGetRecipesListWithIsFavoritedParamNoAuth"/>
+    <testcase name="Структура ответа должна соответствовать ожидаемой" time="0.033" classname="RecipeFiltersForFavoriteAndShoppingCartGetRecipesListWithIsFavoritedParamNoAuth"/>
+  </testsuite>
+  <testsuite name="delete_requests / subscriptions / bad_requests / delete_subscription // No Auth" id="5c030609-aab6-4f07-9ec6-3c3c24a27dfd" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.004">
+    <testcase name="Статус-код ответа должен быть 401" time="0.004" classname="DeleteRequestsSubscriptionsBadRequestsDeleteSubscriptionNoAuth"/>
+  </testsuite>
+  <testsuite name="delete_requests / subscriptions / bad_requests / delete_non_existing_subscription // Second User" id="eca884e0-70d1-43c5-b68e-5f0802aaff29" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.018">
+    <testcase name="Статус-код ответа должен быть 400" time="0.018" classname="DeleteRequestsSubscriptionsBadRequestsDeleteNonExistingSubscriptionSecondUser"/>
+  </testsuite>
+  <testsuite name="delete_requests / subscriptions / bad_requests / delete_subscription_with_non_existing_author_in_url // Second User" id="41ede7de-8d0e-44db-b875-5861f13bf330" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.019">
+    <testcase name="Статус-код ответа должен быть 404" time="0.019" classname="DeleteRequestsSubscriptionsBadRequestsDeleteSubscriptionWithNonExistingAuthorInUrlSecondUser"/>
+  </testsuite>
+  <testsuite name="delete_requests / subscriptions / delete_first_subscription // User" id="5e6cd577-4017-407e-895e-f7a3bc9ff1a0" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.079">
+    <testcase name="Статус-код ответа должен быть 204" time="0.079" classname="DeleteRequestsSubscriptionsDeleteFirstSubscriptionUser"/>
+  </testsuite>
+  <testsuite name="delete_requests / subscriptions / delete_second_subscription // User" id="8fa7ca12-696b-437b-88bd-b6224e7bce9e" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.027">
+    <testcase name="Статус-код ответа должен быть 204" time="0.027" classname="DeleteRequestsSubscriptionsDeleteSecondSubscriptionUser"/>
+  </testsuite>
+  <testsuite name="delete_requests / shopping_cart / bad_requests / remove_from_shopping_cart // No Auth" id="cb32064b-21bb-41e4-8cdf-98975c88d282" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.007">
+    <testcase name="Статус-код ответа должен быть 401" time="0.007" classname="DeleteRequestsShoppingCartBadRequestsRemoveFromShoppingCartNoAuth"/>
+  </testsuite>
+  <testsuite name="delete_requests / shopping_cart / bad_requests / remove_not_added_from_shopping_cart // Second User" id="f5afa176-5758-48fb-ace2-d52479bf52c1" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.020">
+    <testcase name="Статус-код ответа должен быть 400" time="0.020" classname="DeleteRequestsShoppingCartBadRequestsRemoveNotAddedFromShoppingCartSecondUser"/>
+  </testsuite>
+  <testsuite name="delete_requests / shopping_cart / bad_requests / remove_non_existing_recipe_from_shopping_cart // Second User" id="2e079cc1-bfcb-4233-a576-56ac1352ac59" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.017">
+    <testcase name="Статус-код ответа должен быть 404" time="0.017" classname="DeleteRequestsShoppingCartBadRequestsRemoveNonExistingRecipeFromShoppingCartSecondUser"/>
+  </testsuite>
+  <testsuite name="delete_requests / shopping_cart / remove_from_shopping_cart // User" id="34d884d3-6819-4dd9-a3fc-3923e50deec1" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.022">
+    <testcase name="Статус-код ответа должен быть 204" time="0.022" classname="DeleteRequestsShoppingCartRemoveFromShoppingCartUser"/>
+  </testsuite>
+  <testsuite name="delete_requests / favorite / bad_requests / remove_from_favorite // No Auth" id="86289767-3820-492e-a57f-63038201f402" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.006">
+    <testcase name="Статус-код ответа должен быть 401" time="0.006" classname="DeleteRequestsFavoriteBadRequestsRemoveFromFavoriteNoAuth"/>
+  </testsuite>
+  <testsuite name="delete_requests / favorite / bad_requests / remove_not_added_from_favorite // Second User" id="0490fe1d-8c46-4018-ba75-4b45af5e5c4e" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.023">
+    <testcase name="Статус-код ответа должен быть 400" time="0.023" classname="DeleteRequestsFavoriteBadRequestsRemoveNotAddedFromFavoriteSecondUser"/>
+  </testsuite>
+  <testsuite name="delete_requests / favorite / bad_requests / remove_non_existing_recipe_from_favorite // Second User" id="4a0ed19a-5311-4cb1-b667-42a0c890bc8e" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.025">
+    <testcase name="Статус-код ответа должен быть 404" time="0.025" classname="DeleteRequestsFavoriteBadRequestsRemoveNonExistingRecipeFromFavoriteSecondUser"/>
+  </testsuite>
+  <testsuite name="delete_requests / favorite / remove_from_favorite // User" id="f3b28e68-ca65-448a-a87f-05267400dc99" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.026">
+    <testcase name="Статус-код ответа должен быть 204" time="0.026" classname="DeleteRequestsFavoriteRemoveFromFavoriteUser"/>
+  </testsuite>
+  <testsuite name="delete_requests / recipes / bad_requests / delete_recipe // No Auth" id="0035dbb7-c9ce-4608-8ff9-6fb82917ab76" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.019">
+    <testcase name="Статус-код ответа должен быть 401" time="0.019" classname="DeleteRequestsRecipesBadRequestsDeleteRecipeNoAuth"/>
+  </testsuite>
+  <testsuite name="delete_requests / recipes / bad_requests / delete_recipe_not_by_author // Second User" id="b511458d-ef38-4b02-818e-7e20bd257d2f" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.023">
+    <testcase name="Статус-код ответа должен быть 403" time="0.023" classname="DeleteRequestsRecipesBadRequestsDeleteRecipeNotByAuthorSecondUser"/>
+  </testsuite>
+  <testsuite name="delete_requests / recipes / bad_requests / delete_non_existing_recipe // Second User" id="c920841e-1f93-4bfc-b392-15d543030de7" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.025">
+    <testcase name="Статус-код ответа должен быть 404" time="0.025" classname="DeleteRequestsRecipesBadRequestsDeleteNonExistingRecipeSecondUser"/>
+  </testsuite>
+  <testsuite name="delete_requests / recipes / delete_first_recipe // Second User" id="5495dafa-82c2-44eb-bd9d-00ce97cedb02" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.032">
+    <testcase name="Статус-код ответа должен быть 204" time="0.032" classname="DeleteRequestsRecipesDeleteFirstRecipeSecondUser"/>
+  </testsuite>
+  <testsuite name="delete_requests / recipes / delete_second_recipe // Second User" id="e85e9a91-9113-4d88-9580-264c4c738f17" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.024">
+    <testcase name="Статус-код ответа должен быть 204" time="0.024" classname="DeleteRequestsRecipesDeleteSecondRecipeSecondUser"/>
+  </testsuite>
+  <testsuite name="delete_requests / recipes / delete_third_recipe // Second User" id="e6423a09-7d60-4be8-8d33-ff9cc01fecce" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.025">
+    <testcase name="Статус-код ответа должен быть 204" time="0.025" classname="DeleteRequestsRecipesDeleteThirdRecipeSecondUser"/>
+  </testsuite>
+  <testsuite name="delete_requests / recipes / delete_fourth_recipe // Second User" id="88a22f41-2abb-4d56-aa59-36fb4b91280a" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.027">
+    <testcase name="Статус-код ответа должен быть 204" time="0.027" classname="DeleteRequestsRecipesDeleteFourthRecipeSecondUser"/>
+  </testsuite>
+  <testsuite name="delete_requests / recipes / delete_fifth_recipe // Second User" id="923a851a-ad41-41d4-a247-dd6804b7c707" timestamp="2025-06-09T16:13:35.159Z" tests="1" failures="0" errors="0" time="0.027">
+    <testcase name="Статус-код ответа должен быть 204" time="0.027" classname="DeleteRequestsRecipesDeleteFifthRecipeSecondUser"/>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,40 @@
+# .github/workflows/code-quality.yml
+name: Code Quality
+
+on:
+  push:
+    branches: [ main, master, dev ]
+  pull_request:
+    branches: [ main, master, dev ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 black isort mypy
+        pip install -r backend/requirements.txt
+
+    - name: Lint with flake8
+      run: |
+        flake8 backend
+
+    - name: Format with black
+      run: |
+        black --check backend
+
+    - name: Check imports with isort
+      run: |
+        isort --check-only --profile black backend
+
+    - name: Type checking with mypy
+      run: |
+        mypy backend
