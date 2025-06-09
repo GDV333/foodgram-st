@@ -40,8 +40,8 @@ class TestRecipePermissions:
             data,
             format='json'
         )
-        # В данной реализации сначала проходит валидация
-        assert response.status_code == status.HTTP_400_BAD_REQUEST
+        # Должен вернуть 403 Forbidden для чужого рецепта
+        assert response.status_code == status.HTTP_403_FORBIDDEN
 
     def test_delete_recipe_by_different_user(self, authenticated_client, recipe):
         """Тест попытки удаления рецепта другим пользователем."""
@@ -53,8 +53,8 @@ class TestRecipePermissions:
         authenticated_client.force_authenticate(user=other_user)
 
         response = authenticated_client.delete(f'/api/recipes/{recipe.id}/')
-        # В данной реализации сначала проходит валидация
-        assert response.status_code == status.HTTP_400_BAD_REQUEST
+        # Должен вернуть 403 Forbidden для чужого рецепта
+        assert response.status_code == status.HTTP_403_FORBIDDEN
 
     def test_favorite_invalid_recipe_id(self, authenticated_client):
         """Тест добавления в избранное с некорректным ID рецепта."""

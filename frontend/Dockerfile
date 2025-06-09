@@ -1,5 +1,5 @@
 # Multi-stage build для оптимизации
-FROM node:18-alpine AS build
+FROM node:18-alpine AS dependencies
 
 WORKDIR /app
 
@@ -9,14 +9,26 @@ RUN apk add --no-cache git
 # Сначала копируем только файлы зависимостей для кеширования
 COPY package*.json ./
 
-# Очищаем npm кеш и устанавливаем зависимости
-RUN npm cache clean --force && \
-    npm install --legacy-peer-deps --no-audit --no-fund
+# Устанавливаем зависимости с оптимизацией для Docker кеширования
+# Используем npm install с --legacy-peer-deps для совместимости
+RUN npm install --legacy-peer-deps --no-audit --no-fund --cache .npm \
+    && npm cache clean --force
+
+# Build stage
+FROM node:18-alpine AS build
+
+WORKDIR /app
+
+# Копируем установленные зависимости из предыдущего stage
+COPY --from=dependencies /app/node_modules ./node_modules
+COPY --from=dependencies /app/package*.json ./
 
 # Теперь копируем остальные файлы
 COPY . .
 
-# Собираем приложение
+# Собираем приложение с оптимизацией
+ENV NODE_ENV=production
+ENV GENERATE_SOURCEMAP=false
 RUN npm run build
 
 # Production stage - только готовая сборка

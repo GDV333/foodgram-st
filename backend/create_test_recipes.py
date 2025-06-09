@@ -30,7 +30,7 @@ def create_test_users():
         {'username': 'meat_master', 'email': 'meat@foodgram.com', 'first_name': 'Дмитрий', 'last_name': 'Гриллов'},
         {'username': 'vegan_chef', 'email': 'vegan@foodgram.com', 'first_name': 'Елена', 'last_name': 'Зеленина'},
     ]
-    
+
     users = []
     for user_data in users_data:
         user, created = User.objects.get_or_create(
@@ -46,7 +46,7 @@ def create_test_users():
             user.save()
             print(f"✅ Создан пользователь: {user.username}")
         users.append(user)
-    
+
     return users
 
 
@@ -65,7 +65,7 @@ def create_simple_image():
         b'\x00\x00\x00\xff\xda\x00\x0c\x03\x01\x00\x02\x11\x03\x11\x00'
         b'\x3f\x00\xaa\xff\xd9'
     )
-    
+
     return SimpleUploadedFile(
         name='test_recipe.jpg',
         content=image_content,
@@ -76,14 +76,14 @@ def create_simple_image():
 def create_test_recipes():
     """Создаем тестовые рецепты"""
     users = create_test_users()
-    
+
     # Получаем случайные ингредиенты из базы
     all_ingredients = list(Ingredient.objects.all()[:20])  # Берем первые 20 ингредиентов
-    
+
     if not all_ingredients:
         print("❌ Нет ингредиентов в базе. Загрузите сначала ингредиенты.")
         return
-    
+
     recipes_data = [
         {
             'name': 'Классическая яичница',
@@ -158,17 +158,17 @@ def create_test_recipes():
             'ingredients_count': 6
         }
     ]
-    
+
     created_count = 0
     for i, recipe_data in enumerate(recipes_data):
         author = users[i % len(users)]  # Циклически назначаем авторов
-        
+
         try:
             # Проверяем, есть ли уже такой рецепт
             if Recipe.objects.filter(name=recipe_data['name']).exists():
                 print(f"⚠️  Рецепт '{recipe_data['name']}' уже существует")
                 continue
-            
+
             recipe = Recipe.objects.create(
                 author=author,
                 name=recipe_data['name'],
@@ -176,29 +176,29 @@ def create_test_recipes():
                 cooking_time=recipe_data['cooking_time'],
                 image=create_simple_image()
             )
-            
+
             # Добавляем случайные ингредиенты
             recipe_ingredients = []
             selected_ingredients = []
-            
+
             for _ in range(min(recipe_data['ingredients_count'], len(all_ingredients))):
                 ingredient = choice([ing for ing in all_ingredients if ing not in selected_ingredients])
                 selected_ingredients.append(ingredient)
                 amount = randint(50, 500)  # Случайное количество от 50 до 500
-                
+
                 recipe_ingredients.append(RecipeIngredient(
                     recipe=recipe,
                     ingredient=ingredient,
                     amount=amount
                 ))
-            
+
             RecipeIngredient.objects.bulk_create(recipe_ingredients)
             created_count += 1
             print(f"✅ Создан рецепт: {recipe.name} (автор: {author.username})")
-            
+
         except Exception as e:
             print(f"❌ Ошибка при создании рецепта '{recipe_data['name']}': {e}")
-    
+
     print(f"\n🎉 Создано {created_count} тестовых рецептов!")
 
 

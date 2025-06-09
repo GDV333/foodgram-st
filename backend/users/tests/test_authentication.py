@@ -61,7 +61,7 @@ class TestEmailBackend:
 
     def test_authenticate_with_inactive_user(self):
         """Тест аутентификации с неактивным пользователем."""
-        user = User.objects.create_user(
+        User.objects.create_user(
             email='test@example.com',
             username='testuser',
             password='testpass123',

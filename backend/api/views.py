@@ -76,7 +76,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
                 {"detail": "Учетные данные не были предоставлены."},
                 status=status.HTTP_401_UNAUTHORIZED
             )
-        
+
         # Валидируем данные и создаем объект
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -105,7 +105,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
 
     def update(self, request, *args, **kwargs):
         print(f"🔍 UPDATE: User={request.user.id if request.user.is_authenticated else 'Anonymous'}, Recipe ID={kwargs.get('pk')}")
-        
+
         try:
             # Сначала проверяем существование объекта (404)
             instance = self.get_object()
@@ -116,7 +116,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
                 {"detail": "Рецепт не найден."},
                 status=status.HTTP_404_NOT_FOUND
             )
-        
+
         # Проверяем аутентификацию (401)
         if not request.user.is_authenticated:
             print("❌ User not authenticated - returning 401")
@@ -124,7 +124,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
                 {"detail": "Учетные данные не были предоставлены."},
                 status=status.HTTP_401_UNAUTHORIZED
             )
-        
+
         # Проверяем права доступа (403)
         if instance.author != request.user:
             print(f"🚫 Permission denied: Recipe author={instance.author.id}, Request user={request.user.id} - returning 403")
@@ -132,7 +132,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
                 {"detail": "У вас недостаточно прав для выполнения данного действия."},
                 status=status.HTTP_403_FORBIDDEN
             )
-        
+
         print("✅ Permission check passed - updating recipe")
         try:
             # Валидируем данные (400)
@@ -152,7 +152,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
 
     def destroy(self, request, *args, **kwargs):
         print(f"🔍 DESTROY: User={request.user.id if request.user.is_authenticated else 'Anonymous'}, Recipe ID={kwargs.get('pk')}")
-        
+
         try:
             # Сначала проверяем существование объекта (404)
             instance = self.get_object()
@@ -163,7 +163,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
                 {"detail": "Рецепт не найден."},
                 status=status.HTTP_404_NOT_FOUND
             )
-        
+
         # Проверяем аутентификацию (401)
         if not request.user.is_authenticated:
             print("❌ User not authenticated - returning 401")
@@ -171,7 +171,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
                 {"detail": "Учетные данные не были предоставлены."},
                 status=status.HTTP_401_UNAUTHORIZED
             )
-        
+
         # Проверяем права доступа (403)
         if instance.author != request.user:
             print(f"🚫 Permission denied: Recipe author={instance.author.id}, Request user={request.user.id} - returning 403")
@@ -179,7 +179,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
                 {"detail": "У вас недостаточно прав для выполнения данного действия."},
                 status=status.HTTP_403_FORBIDDEN
             )
-        
+
         print("✅ Permission check passed - deleting recipe")
         try:
             # Выполняем удаление
@@ -366,7 +366,8 @@ class RecipeViewSet(viewsets.ModelViewSet):
                     status=status.HTTP_400_BAD_REQUEST
                 )
 
-            recipe = get_object_or_404(Recipe, pk=recipe_id)
+            # Проверяем существование рецепта
+            get_object_or_404(Recipe, pk=recipe_id)
             # Формируем короткую ссылку
             short_link = f"{request.build_absolute_uri('/recipes/')}{recipe_id}/"
             return Response({"short-link": short_link})
@@ -562,5 +563,4 @@ class UserViewSet(viewsets.ModelViewSet):
             authors, many=True, context={'request': request}
         )
         return Response(serializer.data)
-
 

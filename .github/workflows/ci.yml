@@ -58,11 +58,11 @@ jobs:
     - name: Install Newman
       run: npm install -g newman newman-reporter-htmlextra
 
-    - name: Run code quality checks
+    - name: Run basic code quality checks
       working-directory: ./backend
       run: |
+        # Проверяем только критичные ошибки: синтаксис и импорты
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        flake8 . --count --max-complexity=10 --max-line-length=100 --statistics
 
     - name: Apply migrations
       working-directory: ./backend

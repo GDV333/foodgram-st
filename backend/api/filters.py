@@ -10,7 +10,7 @@ User = get_user_model()
 class IngredientSearchFilter(SearchFilter):
     """Фильтр для поиска по названию ингредиента."""
     search_param = 'name'
-    
+
     def filter_queryset(self, request, queryset, view):
         """
         Переопределенный метод фильтрации для поиска по префиксу.
@@ -18,7 +18,7 @@ class IngredientSearchFilter(SearchFilter):
         search_terms = self.get_search_terms(request)
         if not search_terms:
             return queryset
-        
+
         # Используем поиск по префиксу вместо поиска вхождения
         search_term = search_terms[0]  # Берем первый поисковый термин
         return queryset.filter(name__startswith=search_term)
@@ -45,7 +45,8 @@ class RecipeFilter(filters.FilterSet):
             author_id = int(value)
             return queryset.filter(author_id=author_id)
         except (ValueError, TypeError):
-            # Если ID невалидный (например, {{userId}}), возвращаем пустой queryset
+            # Если ID невалидный (например, {{userId}}),
+            # возвращаем пустой queryset
             return queryset.none()
 
     def filter_is_favorited(self, queryset, name, value):

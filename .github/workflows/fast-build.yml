@@ -1,16 +1,16 @@
-name: Docker Build Test
+name: Fast Build Check
 
 on:
+  push:
+    branches: [ develop, feature/* ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ develop ]
 
 env:
   REGISTRY: docker.io
-  BACKEND_IMAGE_NAME: foodgram-backend
-  FRONTEND_IMAGE_NAME: foodgram-frontend
 
 jobs:
-  build-test:
+  quick-build:
     runs-on: ubuntu-latest
     
     steps:
@@ -29,7 +29,16 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-npm-
 
-    - name: Test backend Docker build
+    # Кеширование pip для ускорения backend builds
+    - name: Cache pip dependencies
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('backend/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Quick backend build test
       uses: docker/build-push-action@v5
       with:
         context: ./backend
@@ -37,8 +46,10 @@ jobs:
         push: false
         cache-from: type=gha
         cache-to: type=gha,mode=max
+        build-args: |
+          BUILDKIT_INLINE_CACHE=1
 
-    - name: Test frontend Docker build
+    - name: Quick frontend build test
       uses: docker/build-push-action@v5
       with:
         context: ./frontend
@@ -49,5 +60,7 @@ jobs:
         build-args: |
           BUILDKIT_INLINE_CACHE=1
 
-    - name: Build test success
-      run: echo "✅ Docker builds completed successfully!"
+    - name: Build check success
+      run: |
+        echo "✅ Quick build check completed successfully!"
+        echo "⚡ Single-platform builds for fast feedback"
