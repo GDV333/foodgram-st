@@ -84,8 +84,8 @@ create-env:
 
 load-data:
 	@echo "📊 Загрузка данных ингредиентов..."
-	@cd backend && python manage.py loaddata ../fixtures/dev/ingredients_fixture.json || \
-	cd backend && python manage.py shell -c "from recipes.models import Ingredient; import json; ingredients = json.load(open('../data/ingredients.json')); [Ingredient.objects.get_or_create(name=i['name'], measurement_unit=i['measurement_unit']) for i in ingredients]; print('✅ Ингредиенты загружены')"
+	@cd backend && .venv/bin/python manage.py loaddata ../fixtures/dev/ingredients_fixture.json || \
+	cd backend && .venv/bin/python manage.py shell -c "from recipes.models import Ingredient; import json; ingredients = json.load(open('../data/ingredients.json')); [Ingredient.objects.get_or_create(name=i['name'], measurement_unit=i['measurement_unit']) for i in ingredients]; print('✅ Ингредиенты загружены')"
 
 # === Команды разработки ===
 
@@ -101,9 +101,9 @@ install:
 
 dev-setup: install 
 	@echo "🔧 Настройка окружения разработки..."
-	@cd backend && python manage.py migrate
+	@cd backend && .venv/bin/python manage.py migrate
 	@echo "👤 Создание суперпользователя (если нужен)..."
-	@cd backend && echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.filter(is_superuser=True).exists() or User.objects.create_superuser('admin', 'admin@example.com', 'admin')" | python manage.py shell || true
+	@cd backend && echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.filter(is_superuser=True).exists() or User.objects.create_superuser('admin', 'admin@example.com', 'admin')" | .venv/bin/python manage.py shell || true
 	@echo "✅ Окружение разработки настроено!"
 
 dev-start:
@@ -284,3 +284,9 @@ production-restart:
 	@echo "📊 Применяем миграции..."
 	cd infra && docker compose -f docker-compose.production.yml exec backend python manage.py migrate || true
 	@echo "✅ Production перезапущен!"
+
+# === Очистка тестовых данных (локальный сервер) ===
+
+clear-test-users:
+	@echo "🧪 Очистка тестовых пользователей Newman (локальный сервер)..."
+	@cd backend && .venv/bin/python manage.py shell -c "from django.contrib.auth import get_user_model; User = get_user_model(); usernames_list = ['vasya.ivanov', 'second-user', 'third-user-username', 'NoEmail', 'NoFirstName', 'NoLastName', 'NoPassword', 'TooLongEmail', 'the-username-that-is-150-characters-long-and-should-not-pass-validation-if-the-serializer-is-configured-correctly-otherwise-the-current-test-will-fail-', 'TooLongFirstName', 'TooLongLastName', 'InvalidU\$$ername', 'EmailInUse']; deleted_count, _ = User.objects.filter(username__in=usernames_list).delete(); print(f'✅ Удалено {deleted_count} тестовых пользователей')"
