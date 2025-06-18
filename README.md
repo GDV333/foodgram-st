@@ -138,12 +138,12 @@ make dev-reset
 
 ### Администратор
 - **Username:** admin
-- **Email:** admin@foodgram.com
-- **Password:** admin123
+- **Email:** admin@example.com
+- **Password:** admin
 
 ### Обычные пользователи
 - **Username:** testuser
-- **Email:** test@foodgram.com
+- **Email:** test@example.com
 - **Password:** testpass123
 
 ## Тестирование
@@ -170,9 +170,8 @@ make test-coverage
 
 ## API Документация
 
-Интерактивная документация доступна по адресам:
+Документация доступна по адресу:
 - **ReDoc:** http://localhost/api/docs/
-- **Swagger:** http://localhost/api/schema/swagger-ui/
 
 ### Основные endpoints
 
